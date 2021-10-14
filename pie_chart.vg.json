@@ -1,0 +1,31 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 300,
+  "height": 300,
+  "transform": [
+    {
+      "filter":{
+        "field": "Sex",
+        "oneOf":["M","F"]
+      }
+    },
+    {
+      "filter":"datum.Sex == ''"
+    }
+  ],
+  "layer": [
+    {
+      "data": {
+        "url": "data/athlete_events.csv"
+      },
+      "mark": {"type": "arc", "tooltip": true, "innerRadius": 50},
+      "encoding": {
+        "theta": {"aggregate": "count"},
+        "color": {
+          "field": "Sex",
+          "type": "nominal"
+        }
+      }
+    }
+  ]
+}

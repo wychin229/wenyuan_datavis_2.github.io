@@ -19,14 +19,17 @@
     <h1 class="text-centre selected-font" style="font-size:60px;">The Olympics</h1>
     <h2 class="text-centre selected-font">The Olympics Logo</h2>
     <div class="row">
-      <div class="column">
+      <div class="column" >
         <img style="display: block;margin-left: auto;margin-right: auto;" src="img\Olympic_rings_without_rims.svg.png"
           alt="The five-ringed symbol of the Olympic Games" width="300" height="150">
       </div>
+      <div class="mid-div">
+        <p></p>
+      </div>
       <div class="column">
-        <p>The 5 rings are intended to represents the five continents: <em>Europe</em>, <em>Africa</em>, 
+        <p>The 5 rings are intended to represents the five continents: <em>Europe</em>, <em>Africa</em>,
           <em>Asia</em>, the <em>Americas</em>
-           and <em>Oceania</em>.
+          and <em>Oceania</em>.
           Other than that,
           the six colours including the white background are combined this way to reproduce the colours of every country
           without exception. <sub>[1]</sub>
@@ -35,23 +38,41 @@
     </div>
     </br>
     <h2 class="text-centre selected-font">History of Olympics</h2>
-    <p>Since the opening of the first modern Olympic Games in 1896, the international sports competition has only been
-      canceled <strong>three</strong> times: once during <strong> World War I </strong>(1916) and twice during
-      <strong>World War II</strong> (1940, 1944).<sub>[2]</sub>
-    </p>
-    <p>Hence, in the line chart below where it shows the number of athletes participated in each Olympics games, there
-      is no record for these 3 games.</p>
+    <div class="row">
+      <div class="column">
+        <p>Since the opening of the first modern Olympic Games in 1896, the international sports competition has only
+          been
+          canceled <em>3</em> times: once during <em> World War I </em>(1916) and twice during
+          <em>World War II</em> (1940, 1944).<sub>[2]</sub>
+        </p>
 
-    <p>The below visualisation only visualises the top 5 countries which won the most medal in Tokyo Olympics 2020,
-      which is the United States of America (<strong>USA</strong>)
-      , China (<strong>CHN</strong>), Japan (<strong>JPN</strong>), the United Kingdoms (<strong>GBR</strong>) <br> and
-      Russian Olympic Committee (<strong>RUS</strong>). <sub>[3]</sub>
-    </p>
-
+        <p>Hence, in the line chart below where it shows the number of athletes participated in each Olympics games,
+          there
+          is no record for these 3 games.</p>
+      </div>
+      <div class="mid-div">
+        <p></p>
+      </div>
+      <div class="column">
+        <div class="centre">
+          <div id="bar" style="width: auto;height: auto;"></div>
+        </div>
+      </div>
+      <div class="column">
+        <p>The below visualisation only visualises the <em>top 5</em> countries which won the most medal in Tokyo
+          Olympics 2020,
+          which is the United States of America (<em style="color: #637939;">USA</em>)
+          , China (<em style="color: #393b79;">CHN</em>), Japan (<em style="color: #6b6ecf;">JPN</em>), the United
+          Kingdoms (<em style="color: #5254a3;">GBR</em>) and
+          Russian Olympic Committee (<em style="color: #9c9ede;">RUS</em>). <sub>[3]</sub>
+        </p>
+      </div>
+    </div>
     <div class="centre">
       <div id="line_chart" style="width: auto;height: auto;"></div>
     </div>
     <h1 class="text-centre selected-font">Athletes Gender Comparison</h1>
+    
     <div class="centre">
       <div id="population_pyramid" style="width: auto;height: auto;"></div>
     </div>
@@ -87,6 +108,11 @@
 
     var spec3 = "populationpyramid.vg.json";
     vegaEmbed('#population_pyramid', spec3).then(function (result) {
+      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+
+    var spec4 = "bar.vg.json";
+    vegaEmbed('#bar', spec4).then(function (result) {
       // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
     }).catch(console.error);
   </script>

@@ -1,0 +1,28 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 450,
+  "height": 300,
+  "title": "Athletes in Past Olympics",
+  "data": {
+    "url": "data/athlete_events.csv"
+  },
+  "transform": [
+    {
+      "filter": "datum.Season == 'Summer'"
+    }
+  ],
+  "mark": {"type": "bar","tooltip": true},
+  "encoding": {
+    "y": {
+      "aggregate": "count",
+      "type": "quantitative",
+      "axis": {
+      "title": "Number of Athletes"
+      }
+    },
+    "x": {
+      "field": "Year",
+      "type": "temporal"
+    }
+  }
+}
