@@ -1,23 +1,33 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "width": 300,
-  "height": 300,
+  "width": 150,
+  "height": 150,
+  "title": "Gender Distribution of Tokyo Olympics 2020",
   "data": {
     "url": "data/EntriesGender.csv"
   },
-  "transform": [
-  ],
   "layer": [
     {
-      
-      "mark": {"type": "arc", "tooltip": true, "innerRadius": 50},
+      "mark": {
+        "type": "arc",
+        "tooltip": true,
+        "innerRadius": 50
+      },
       "encoding": {
-        "theta": {"aggregate": "sum", "field":"sex"},
+        "theta": {
+          "aggregate": "sum",
+          "field": "count"
+        },
         "color": {
           "field": "sex",
           "type": "nominal"
         }
       }
     }
-  ]
+  ],
+  "config": {
+    "view": {
+       "stroke": "transparent"
+    }
+  }
 }

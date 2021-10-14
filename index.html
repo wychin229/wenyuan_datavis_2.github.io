@@ -76,32 +76,49 @@
     <h1 class="text-centre selected-font" style="font-size:40px;">The Tokyo Olympics 2020</h1>
     <h2 class="text-centre selected-font">Athletes Gender Equality</h2>
     <div class="row">
-      <div class="column">
-        <p>According to The Conversation's article<sub>[4]</sub>, The Internation Olympic Committee has called the Tokyo
-          Olympics the
-          <strong>most gender equal Games</strong> of all time, with women comprising a record-breaking <em>49</em>
-          percent of
-          participants.
+      <img style="display: block;margin-left: auto;margin-right: auto;" src="img\gender.png" alt="women and men symbol"
+        width="auto" height="150">
+    </div>
+    <div></div>
+    <div class="row">
+      <p>According to The Conversation's article<sub>[4]</sub>, The Internation Olympic Committee has called the Tokyo
+        Olympics the
+        <strong>most gender equal Games</strong> of all time, with women comprising a record-breaking <em>49</em>
+        percent of
+        participants.
+      </p>
+    </div>
+    <div class="row">
+      <div class="column" style="height: 300px;">
+        <p>Below the visualisation shows the population pyramid according to athlete's gender in all of the events in
+          the Tokyo Olympics 2020. </br>
+          We can see that the gender distribution is quite average across the two gender with overall men at
+          <em>51%</em> and women at <em>49%</em>. This is Tokyo Olympics 2020 has added <em>18</em> new events and established
+          equal number of spots for both men and women. Other than that, there is also a higher number of mixed-gender competitions.
         </p>
       </div>
       <div class="mid-div">
         <p></p>
       </div>
       <div class="column">
-        <img style="display: block;margin-left: auto;margin-right: auto;" src="img\gender.png"
-          alt="women and men symbol" width="auto" height="150">
+        <div id="pie_2020" style="height: 250px;display: block; left: 25%;margin-top: 50px;"></div>
       </div>
     </div>
-    <div class="row" style="padding: 10px;">
-      <p>Below the visualisation shows the population pyramid according to athlete's gender in all of the events in the Tokyo Olympics 2020.
-        We can observe that the gender distribution is quite average across the two gender with overall men at <em>51%</em> and women at <em>49%</em>.
-      </p>
+    <div class="row">
+      <div class="quater" id="pie_1968"></div>
+      <div class="quater" id="pie_1984"></div>
+      <div class="quater" id="pie_2000"></div>
+      <div class="quater" id="pie_2016"></div>
     </div>
-
-
+    <p style="font-size: 15px; text-align: center;">Figures above visualises the gender distribution of athletes in Olympics in 1968, 1984, 2000 and 2016.</p>
+    <div class="row">
+      <p>From the above pie charts, we can see that there is a significant increase in female athletes from 1980s to date.</p>
+    </div>
     <div class="centre">
       <div id="population_pyramid" style="width: auto;height: auto;"></div>
     </div>
+
+    <h2 class="text-centre selected-font">Medals</h2>
     <div class="centre">
       <div id="symbol_map" style="height: 650px;"></div>
     </div>
@@ -117,9 +134,9 @@
           href="https://olympics.com/tokyo-2020/olympic-games/en/results/all-sports/medal-standings.htm">https://olympics.com/tokyo-2020/olympic-games/en/results/all-sports/medal-standings.htm</a>
       </p>
       <p class="source-text">[4]: <a
-        href="https://theconversation.com/the-tokyo-olympics-are-billed-as-the-first-gender-equal-games-but-women-still-lack-opportunities-in-sport-165280">
-        https://theconversation.com/the-tokyo-olympics-are-billed-as-the-first-gender-equal-games-but-women-still-lack-opportunities-in-sport-165280</a>
-    </p>
+          href="https://theconversation.com/the-tokyo-olympics-are-billed-as-the-first-gender-equal-games-but-women-still-lack-opportunities-in-sport-165280">
+          https://theconversation.com/the-tokyo-olympics-are-billed-as-the-first-gender-equal-games-but-women-still-lack-opportunities-in-sport-165280</a>
+      </p>
     </div>
 
   </div>
@@ -143,6 +160,31 @@
 
     var spec4 = "bar.vg.json";
     vegaEmbed('#bar', spec4).then(function (result) {
+      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+
+    var spec5 = "pie_chart_2020.vg.json";
+    vegaEmbed('#pie_2020', spec5).then(function (result) {
+      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+
+    var spec6 = "pie_chart_2000.vg.json";
+    vegaEmbed('#pie_2000', spec6).then(function (result) {
+      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+
+    var spec7 = "pie_chart_2016.vg.json";
+    vegaEmbed('#pie_2016', spec7).then(function (result) {
+      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+
+    var spec8 = "pie_chart_1984.vg.json";
+    vegaEmbed('#pie_1984', spec8).then(function (result) {
+      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+
+    var spec9 = "pie_chart_1968.vg.json";
+    vegaEmbed('#pie_1968', spec9).then(function (result) {
       // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
     }).catch(console.error);
   </script>

@@ -1,14 +1,17 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "width": 300,
-  "height": 300,
+  "width": 150,
+  "height": 150,
+  "title": "2000",
   "data": {
     "url": "data/athlete_events.csv"
   },
   "transform": [
-
     {
       "filter": "datum.Season == 'Summer'"
+    },
+    {
+      "filter": "datum.Year == 2000"
     }
   ],
   "layer": [
@@ -23,5 +26,10 @@
         }
       }
     }
-  ]
+  ],
+  "config": {
+    "view": {
+       "stroke": "transparent"
+    }
+  }
 }

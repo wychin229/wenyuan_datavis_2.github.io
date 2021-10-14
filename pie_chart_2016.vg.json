@@ -1,0 +1,35 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 150,
+  "height": 150,
+  "title": "2016",
+  "data": {
+    "url": "data/athlete_events.csv"
+  },
+  "transform": [
+    {
+      "filter": "datum.Season == 'Summer'"
+    },
+    {
+      "filter": "datum.Year == 2016"
+    }
+  ],
+  "layer": [
+    {
+      
+      "mark": {"type": "arc", "tooltip": true, "innerRadius": 50},
+      "encoding": {
+        "theta": {"aggregate": "count"},
+        "color": {
+          "field": "Sex",
+          "type": "nominal"
+        }
+      }
+    }
+  ],
+  "config": {
+    "view": {
+       "stroke": "transparent"
+    }
+  }
+}

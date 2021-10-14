@@ -1,7 +1,8 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "width": 1000,
+  "width": 900,
   "height": 800,
+  "title": "Gender Distribution in Tokyo Olympics 2020 Events",
   "data": {
     "url": "data/EntriesGender.csv"
   },
