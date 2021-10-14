@@ -1,0 +1,66 @@
+#symbol_map {
+	top:100px;
+	bottom: 100px; 
+	left: 100px;
+	right: 100px;
+	/*height: 1000px;
+	width: 800px;*/
+}
+
+.border-centre {
+	margin: auto;
+	width: 75%;
+	padding: 40px;
+	background-color: white;
+	box-shadow: 15px 15px 5px rgb(173, 173, 173);
+	border-radius: 50px;
+}
+.column {
+	float: left;
+	width: 50%;
+}
+  
+  /* Clear floats after the columns */
+.row:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+div.centre {
+	margin: auto;
+	width: 100%;
+	padding: 5px;
+}
+
+div.symbol {
+	
+}
+em {
+	font-size: 150%;
+	font-weight: bold;
+	font-style: italic;
+}
+.source_annotation {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 15px;
+}
+.text-centre {
+	text-align: center;
+}
+
+.selected-font {
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+p {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 20px;
+	text-align: left;
+}
+
+p.source-text {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 15px;
+	text-align: center;
+}

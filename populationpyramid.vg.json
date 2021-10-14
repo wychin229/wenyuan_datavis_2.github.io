@@ -1,0 +1,51 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 1000,
+  "height": 800,
+  "data": {
+    "url": "data/EntriesGender.csv"
+  },
+  "transform": [
+    {
+      "calculate": "datum.sex == 'Female' ? -datum.count : datum.count",
+      "as": "signed_people"
+    }
+  ],
+  "mark": {"type": "bar","tooltip": true},
+  "encoding": {
+    "y": {
+      "field": "Discipline",
+      "sort": "descending",
+      "title": "Events"
+    },
+    "x": {
+      "aggregate": "sum",
+      "field": "signed_people",
+      "title": "Atheletes",
+      "axis": {
+        "format": "s"
+      }
+    },
+    "color": {
+      "field": "sex",
+      "scale": {
+        "range": [
+          "#675193",
+          "#ca8861"
+        ]
+      },
+      "legend": {
+        "orient": "top",
+        "title": null
+      }
+    }
+  },
+  "config": {
+    "view": {
+      "stroke": null
+    },
+    "axis": {
+      "grid": false
+    }
+  }
+}
