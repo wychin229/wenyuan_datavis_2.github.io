@@ -3,6 +3,7 @@
   "width": 800,
   "height": 500,
   "projection": {"type": "equalEarth"},
+  "title": "Tokyo Olympic 2020 Medal Distribution",
   "layer": [
     {
       "data": {
