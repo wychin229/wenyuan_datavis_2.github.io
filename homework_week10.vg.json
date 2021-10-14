@@ -2,6 +2,7 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "width": 1000,
   "height": 300,
+  "title": "Top 5 countries with Most Medal in Tokyo Olympics 2020 Throughout 120 Years",
   "data": {
     "url": "data/athlete_events.csv"
   },

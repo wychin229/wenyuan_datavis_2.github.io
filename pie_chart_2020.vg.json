@@ -1,0 +1,23 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 300,
+  "height": 300,
+  "data": {
+    "url": "data/EntriesGender.csv"
+  },
+  "transform": [
+  ],
+  "layer": [
+    {
+      
+      "mark": {"type": "arc", "tooltip": true, "innerRadius": 50},
+      "encoding": {
+        "theta": {"aggregate": "sum", "field":"sex"},
+        "color": {
+          "field": "sex",
+          "type": "nominal"
+        }
+      }
+    }
+  ]
+}
