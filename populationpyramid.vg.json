@@ -8,7 +8,7 @@
   },
   "transform": [
     {
-      "calculate": "datum.sex == 'Female' ? -datum.count : datum.count",
+      "calculate": "datum.sex == 'Male' ? -datum.count : datum.count",
       "as": "signed_people"
     }
   ],
@@ -30,10 +30,8 @@
     "color": {
       "field": "sex",
       "scale": {
-        "range": [
-          "#675193",
-          "#ca8861"
-        ]
+          "domain": ["Female","Male"],
+          "range": ["#00ADE7","#E60153"]
       },
       "legend": {
         "orient": "top",

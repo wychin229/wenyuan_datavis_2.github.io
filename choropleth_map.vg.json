@@ -43,7 +43,7 @@
       "mark": {
         "type": "geoshape",
         "fill": "lightgray",
-        "stroke": "white"
+        "stroke": "black"
       }
     },
     {
@@ -53,7 +53,10 @@
       "encoding": {
         "color": {
           "field": "Total Count",
-          "type": "quantitative"
+          "type": "quantitative",
+          "scale": {
+            "scheme": "browns"
+          }          
         },
         "tooltip": [
           {
