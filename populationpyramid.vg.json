@@ -16,7 +16,7 @@
   "encoding": {
     "y": {
       "field": "Discipline",
-      "sort": "descending",
+      "sort": "ascending",
       "title": "Events"
     },
     "x": {
@@ -39,7 +39,20 @@
         "orient": "top",
         "title": null
       }
-    }
+    },
+    "tooltip": [
+      {
+        "aggregate": "sum",
+        "field": "count",
+        "type": "quantitative",
+        "title": "Number of Athletes"
+      },
+      {
+        "field": "Discipline",
+        "type": "ordinal",
+        "title": "Event"
+      }
+    ]
   },
   "config": {
     "view": {

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <title>Olympics</title>
   <!-- Import Vega & Vega-Lite (does not have to be from CDN) -->
@@ -15,149 +16,138 @@
 
 <body style="background-color: #EEE8AA;">
   <div class="border-centre">
-    
+
     <h1 class="text-centre selected-font" style="font-size:60px;">The Olympics</h1>
-    <p style="font-size: 15px; text-align: center;">A visualisation by Chin Wen Yuan (29975239)</p>
-    <h2 class="text-centre selected-font">The Olympics Logo</h2>
-    <div class="row">
+    <p style="font-size: 15px; text-align: center;">A visualisation by Chin Wen Yuan</p>
+    <h2 class="text-centre selected-font" style="background-color: #EEE8AA;">The Olympics Logo</h2>
+    <div class="row" style="height: 220px;">
       <div class="column">
-        <img style="display: block;margin-left: auto;margin-right: auto;" src="img\Olympic_rings_without_rims.svg.png"
+        <img style="display: block; margin-left: auto;margin-top: 30px;" src="img\Olympic_rings_without_rims.svg.png"
           alt="The five-ringed symbol of the Olympic Games" width="300" height="150">
       </div>
       <div class="mid-div">
         <p></p>
       </div>
       <div class="column">
-        <p>The 5 rings are intended to represents the five continents: <em>Europe</em>, <em>Africa</em>,
+        <p style="margin: 0px;margin-top: 30px;">The 5 rings are intended to represents the five continents:
+          <em>Europe</em>, <em>Africa</em>,
           <em>Asia</em>, the <em>Americas</em>
-          and <em>Oceania</em>.
-          Other than that,
-          the six colours including the white background are combined this way to reproduce the colours of every country
-          without exception. <sub>[1]</sub>
+          and <em>Oceania</em>.<sub>[1]</sub>
         </p>
       </div>
     </div>
     </br>
-    <h2 class="text-centre selected-font">History of Olympics</h2>
+    <h2 class="text-centre selected-font" style="background-color: #EEE8AA;">120 Years of Olympic Games</h2>
     <div class="row">
       <div class="column">
-        </br>
-        </br>
-        <p>Since the opening of the first modern Olympic Games in 1896, the international sports competition has only
-          been
-          canceled <em>3</em> times: once during <em> World War I </em>(1916) and twice during
+        <p style="margin: 0px;margin-top: 30px;"">As shown in the bar chart, there is no record for a few games. This is because since the opening of the first modern Olympic Games in 1896, 
+          the international sports competition has only
+          been canceled <em>3</em> times: once during <em> World War I </em>(1916) and twice during
           <em>World War II</em> (1940, 1944).<sub>[2]</sub>
         </p>
 
-        <p>Hence, in the line chart below where it shows the number of athletes participated in each Olympics games,
-          there
-          is no record for these 3 games.</p>
       </div>
-      <div class="mid-div">
+      <div class=" mid-div">
         <p></p>
       </div>
       <div class="column">
         <div class="centre">
-          <div id="bar" style="width: auto;height: auto;"></div>
+          <div id="bar" style="width: auto;height: auto;margin-top: 30px;"></div>
         </div>
-        <p style="font-size: 15px; text-align: center;">Figures above visualises total number of each Olympic Games.</p>
       </div>
     </div>
     <div class="row" style="padding: 10px;">
       <p>The below visualisation visualises the <strong>number of athletes in past Olympic Games</strong> from the
         <em>Top 5</em> countries which won the <strong>most medal in Tokyo Olympics 2020</strong>,
-        which are the United States of America (<em style="color: #637939;">USA</em>)
-        , China (<em style="color: #393b79;">CHN</em>), Japan (<em style="color: #6b6ecf;">JPN</em>), the United
-        Kingdoms (<em style="color: #5254a3;">GBR</em>) and
-        Russian Olympic Committee (<em style="color: #9c9ede;">RUS</em>). <sub>[3]</sub>
+        which are the United States of America (<em style="color: #9467bd;">USA</em>)
+        , China (<em style="color: #1f77b4;">CHN</em>), Japan (<em style="color: #2ca02c;">JPN</em>), the United
+        Kingdoms (<em style="color: #ff7f0e;">GBR</em>) and
+        Russian Olympic Committee (<em style="color: #d62728;">RUS</em>). <sub>[3]</sub>
       </p>
     </div>
     <div class="centre">
       <div id="line_chart" style="width: auto;height: auto;"></div>
     </div>
-    <p style="font-size: 15px; text-align: center;">Figure above visualises the number of athletes from China, Japan,
-      Russia, United Kingdom and the United States of America across 120 years</p>
-    <h1 class="text-centre selected-font" style="font-size:40px;">The Tokyo Olympics 2020</h1>
-    <h2 class="text-centre selected-font">Athletes Gender Equality</h2>
+
+    <h1 class="text-centre selected-font" style="font-size:40px;background-color: #eee473;">The Tokyo Olympics 2020</h1>
+    <h2 class="text-centre selected-font" style="background-color: #EEE8AA;">Medals</h2>
     <div class="row">
-      <img style="display: block;margin-left: auto;margin-right: auto;" src="img\gender.png" alt="women and men symbol"
-        width="auto" height="150">
+      <p style="text-align: center;margin-top: 50px;">Below visualises the final medal count of each country that has
+        participated in the Tokyo Olympics 2020.</p>
+    </div>
+    <p style="font-size: 15px; text-align: center;font-style: italic;">Note: Grey region indicates that the country did
+      not participate in Tokyo Olympics 2020.</p>
+    <div style="height: max-content;margin-left: 75px;">
+      <div id="choropleth_map"></div>
+      <span class="clear"></span>
+    </div>
+
+    <div class="row">
+      <div class="column">
+        <img style="display: block;margin-left: auto;margin-top:30px;margin-bottom: 30px;" src="img\did_you_know.png"
+          alt="did you know?" width="auto" height="150">
+      </div>
+      <div class="mid-div">
+        <p></p>
+      </div>
+      <div class="column">
+        <p style="margin: 0px;margin-top:30px;margin-bottom: 30px;">
+          In the <strong>Tokyo 2020 Medal Project</strong><sub>[4]</sub>,
+          </br>approximate <em>78,985 tons</em> of material </br>was collected, including approximate <em>6.21
+            million</em> of used mobile phones which was used to produce approximate <em>5,000 medals</em>.
+        </p>
+      </div>
+    </div>
+
+
+    <h2 class="text-centre selected-font" style="background-color: #EEE8AA;">Athletes Gender Equality</h2>
+    <div class="row">
+      <img style="display: block;margin-left: auto;margin-right: auto;margin-top: 30px;" src="img\gender.png"
+        alt="women and men symbol" width="auto" height="150">
     </div>
     <div></div>
     <div class="row">
-      <p>According to The Conversation's article<sub>[4]</sub>, The Internation Olympic Committee has called the Tokyo
-        Olympics the
-        <strong>most gender equal Games</strong> of all time, with women comprising a record-breaking <em>49</em>
+      <p style="text-align: center;">
+        Below in the visualisation visualises the <strong>gender distribution of athletes
+          in the respective game</strong></br>
+        (as of the year in chart title). We can observe that there is a<strong>significant growth in number
+          of female athletes</strong> </br> in the Olympic Games from past to more recent games.</p>
+    </div>
+    <div class="row" style="margin-left: 170px;">
+      <div id="pie_1968"></div>
+      <div id="pie_1984"></div>
+      <div id="pie_2000"></div>
+      <div id="pie_2016"></div>
+    </div>
+
+    <div class="row" style="margin-top: 50px;">
+      <p style="text-align: center;">According to The Conversation's article<sub>[5]</sub>, The Internation Olympic
+        Committee has called the Tokyo
+        Olympics </br>the<em> Most Gender Equal Game</em> of all time, with women comprising a record-breaking
+        <em>49</em>
         percent of
         participants.
       </p>
     </div>
+
     <div class="row">
-      <div class="column" style="height: 300px;">
-        <p>Below the visualisation shows the population pyramid according to athlete's gender in all of the events in
-          the Tokyo Olympics 2020. </br>
-          We can see that the gender distribution is quite average across the two gender with overall men at
-          <em>51%</em> and women at <em>49%</em>. This is Tokyo Olympics 2020 has added <em>18</em> new events and
-          established
-          equal number of spots for both men and women. Other than that, there is also a higher number of mixed-gender
-          competitions.
-        </p>
-      </div>
-      <div class="mid-div">
-        <p></p>
-      </div>
-      <div class="column">
-        <div id="pie_2020" style="height: 250px;display: block; left: 25%;margin-top: 50px;"></div>
-      </div>
+      <div id="pie_2020" style="padding-left: 500px;"></div>
     </div>
     <div class="row">
-      <div class="quater" id="pie_1968"></div>
-      <div class="quater" id="pie_1984"></div>
-      <div class="quater" id="pie_2000"></div>
-      <div class="quater" id="pie_2016"></div>
-    </div>
-    <p style="font-size: 15px; text-align: center;">Figures above visualises the gender distribution of athletes in
-      Olympics in 1968, 1984, 2000 and 2016.</p>
-    <div class="row">
-      <p>From the above pie charts, we can see that there is a significant increase in female athletes from 1980s to
-        date. This is due to the efforts
-        of the <strong>International Olympic Committee (IOC)</strong><sub>[5]</sub> in order to achieve <strong>gender
-          equality</strong> so that girls and women around the world are given greater access and
-        opportunities to participate in sport events.
+      <p style="text-align: center;">The visualisation above shows the gender distribution of Tokyo Olympics 2020,</br>
+        we can see that overall men are at
+        <em>51%</em> and women are at <em>49%</em>.</br></br>
+        Below in the population pyramid shows the breakdown of the </br>gender distribution of athletes in each event in
+        Tokyo Olympics 2020.
       </p>
     </div>
+
     </br>
     </br>
     <div class="centre">
-      <div id="population_pyramid" style="width: auto;height: auto;"></div>
+      <div id="population_pyramid" style="width: auto;height: auto;padding-left: 50px;"></div>
     </div>
-    <p style="font-size: 15px; text-align: center;">Figures above visualises the gender distribution of athletes in
-      Tokyo Olympics 2020.</p>
-    <h2 class="text-centre selected-font">Medals</h2>
-    <div class="row">
-      <div class="column">
-        <img style="display: block;margin-left: auto;margin-right: auto;" src="img\did_you_know.png" alt="did you know?"
-          width="auto" height="150">
-      </div>
-      <div class="mid-div">
-        <p></p>
-      </div>
-      <div class="column">
-        <p>
-          Tokyo Olympics 2020 committee had initiated their <strong>Tokyo 2020 Medal Project</strong><sub>[6]</sub> to
-          collect
-          small electronic devices such as used mobile phones from all over Japan to produce the Olympic and Paralympic
-          medals.
-          According to them, approximate <em>78,985 tons</em> of material was collected, including approximate <em>6.21
-            million</em>
-          of used mobile phones which was used to produce approximate <em>5,000 medals</em> (gold, silver, bronze).
-        </p>
-      </div>
-    </div>
-    <div class="centre" style="height: 650px;">
-      <div id="symbol_map" style="height: 650px;"></div>
-    </div>
-    <p style="font-size: 15px; text-align: center;">Figures above visualises the medal distribution of Tokyo Olympics 2020.</p>
+
     <div name="sources">
       <div style="width: 10%;">
         <p style="text-align: left;">Sources</p>
@@ -172,16 +162,14 @@
         <p class="source-text">[3]: <a
             href="https://olympics.com/tokyo-2020/olympic-games/en/results/all-sports/medal-standings.htm">https://olympics.com/tokyo-2020/olympic-games/en/results/all-sports/medal-standings.htm</a>
         </p>
-        <p class="source-text">[4]: <a
+        <p class="source-text">[4]: <a href="https://olympics.com/tokyo-2020/en/games/medals-project/">
+            https://olympics.com/tokyo-2020/en/games/medals-project/</a>
+        </p>
+        <p class="source-text">[5]: <a
             href="https://theconversation.com/the-tokyo-olympics-are-billed-as-the-first-gender-equal-games-but-women-still-lack-opportunities-in-sport-165280">
             https://theconversation.com/the-tokyo-olympics-are-billed-as-the-first-gender-equal-games-but-women-still-lack-opportunities-in-sport-165280</a>
         </p>
-        <p class="source-text">[5]: <a href="https://olympics.com/ioc/gender-equality">
-            https://olympics.com/ioc/gender-equality</a>
-        </p>
-        <p class="source-text">[6]: <a href="https://olympics.com/tokyo-2020/en/games/medals-project/">
-            https://olympics.com/tokyo-2020/en/games/medals-project/</a>
-        </p>
+
       </div>
     </div>
 
@@ -189,8 +177,8 @@
 
   </div></br>
   <script type="text/javascript">
-    var spec1 = "medal_map.vg.json";
-    vegaEmbed('#symbol_map', spec1).then(function (result) {
+    var spec1 = "choropleth_map.vg.json";
+    vegaEmbed('#choropleth_map', spec1).then(function (result) {
       // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
     }).catch(console.error);
 

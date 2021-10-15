@@ -35,6 +35,9 @@
   "config": {
     "view": {
        "stroke": "transparent"
+    },
+    "legend": {
+      "disable": true
     }
   }
 }

@@ -14,15 +14,41 @@
       "filter": "datum.Year == 1968"
     }
   ],
+  "encoding": {
+    "theta": {"aggregate": "count", "stack": true},
+    "color": {
+      "field": "Sex",
+      "type": "nominal"
+    }
+  },
   "layer": [
     {
-      
       "mark": {"type": "arc", "tooltip": true, "innerRadius": 50},
       "encoding": {
-        "theta": {"aggregate": "count"},
+        "tooltip": [
+          {
+            "aggregate": "count",
+            "title": "Number of Athletes"
+          },
+          {
+            "field": "Sex",
+            "type": "nominal",
+            "title": "Gender"
+          }
+        ]
+      }
+    },
+    {
+      "mark": {"type": "text", "radius": 35},
+      "encoding": {
+        "text": {"aggregate": "count", "type": "quantitative"},
         "color": {
           "field": "Sex",
-          "type": "nominal"
+          "type": "nominal",
+          "scale": {
+            "domain": ["F","M"],
+            "range": ["#00ADE7","#E60153"]
+          }
         }
       }
     }
@@ -30,6 +56,9 @@
   "config": {
     "view": {
        "stroke": "transparent"
+    },
+    "legend": {
+      "disable": true
     }
   }
 }

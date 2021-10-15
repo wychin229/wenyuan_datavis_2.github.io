@@ -60,7 +60,7 @@
         "color": {
           "field": "NOC",
           "scale": {
-            "scheme": "category20b"
+            "scheme": "category10"
           }
         },
         "opacity": {

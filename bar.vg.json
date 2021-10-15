@@ -11,18 +11,88 @@
       "filter": "datum.Season == 'Summer'"
     }
   ],
-  "mark": {"type": "bar","tooltip": true},
-  "encoding": {
-    "y": {
-      "aggregate": "count",
-      "type": "quantitative",
-      "axis": {
-      "title": "Number of Athletes"
+  "layer": [
+    {
+      "mark": {
+        "type": "bar",
+        "tooltip": true
+      },
+      "encoding": {
+        "y": {
+          "aggregate": "count",
+          "type": "quantitative",
+          "axis": {
+            "title": "Number of Athletes",
+            "grid": false
+          }
+        },
+        "x": {
+          "field": "Year",
+          "type": "temporal",
+          "axis": {
+            "grid": false
+          }
+        },
+        "color": {
+          "value": "#eeca3b"
+        },
+        "tooltip": [
+          {
+            "aggregate": "count",
+            "type": "quantitative",
+            "title": "Number of Athletes"
+          },
+          {
+            "field": "Year",
+            "type": "temporal",
+            "title": "Year",
+            "timeUnit":"year"
+          }
+        ]
       }
     },
-    "x": {
-      "field": "Year",
-      "type": "temporal"
+    {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": -60,
+        "dy": -30,
+        "text": [
+          "Game cancelled in",
+          " 1940 and 1944 due to",
+          "World War II."
+        ],
+        "fontSize": 11
+      },
+      "encoding": {
+        "color": {
+          "value": "black"
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": -200,
+        "dy": 50,
+        "text": [
+          "Game cancelled in",
+          "1916 due to",
+          "World War I."
+        ],
+        "fontSize": 11
+      },
+      "encoding": {
+        "color": {
+          "value": "black"
+        }
+      }
+    }
+  ],
+  "config": {
+    "view": {
+      "stroke": "transparent"
     }
   }
 }
