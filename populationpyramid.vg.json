@@ -30,7 +30,7 @@
     "color": {
       "field": "sex",
       "scale": {
-          "domain": ["Female","Male"],
+          "domain": ["Male","Female"],
           "range": ["#00ADE7","#E60153"]
       },
       "legend": {

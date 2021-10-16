@@ -7,7 +7,7 @@
       "transform": [{
         "filter": {"field": "sex", "equal": "Female"}
       }],
-      "title": "Female",
+      "title": "Male",
       "mark": "bar",
       "encoding": {
         "y": {
@@ -56,7 +56,7 @@
       "transform": [{
         "filter": {"field": "sex", "equal": "Male"}
       }],
-      "title": "Male",
+      "title": "Female",
       "mark": "bar",
       "encoding": {
         "y": {

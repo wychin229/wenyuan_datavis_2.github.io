@@ -58,7 +58,7 @@
           "field": "Sex",
           "type": "nominal",
           "scale": {
-            "domain": ["F","M"],
+            "domain": ["M","F"],
             "range": ["#00ADE7","#E60153"]
           }
         }
