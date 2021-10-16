@@ -19,7 +19,7 @@
         },
         "key": "country",
         "fields": [
-          "total"
+          "total","gold","silver","bronze"
         ]
       }
     },
@@ -68,6 +68,21 @@
             "field": "total",
             "type": "quantitative",
             "title": "Medal Count"
+          },
+          {
+            "field": "gold",
+            "type": "quantitative",
+            "title": "Gold"
+          },
+          {
+            "field": "silver",
+            "type": "quantitative",
+            "title": "Silver"
+          },
+          {
+            "field": "bronze",
+            "type": "quantitative",
+            "title": "Bronze"
           }
         ]
       }
