@@ -1,0 +1,95 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "description": "A population pyramid for the US in 2000.",
+    "data": { "url": "data/EntriesGender.csv"},
+    "spacing": 0,
+    "hconcat": [{
+      "transform": [{
+        "filter": {"field": "sex", "equal": "Female"}
+      }],
+      "title": "Female",
+      "mark": "bar",
+      "encoding": {
+        "y": {
+          "field": "Discipline", "axis": null, "sort": "ascending"
+        },
+        "x": {
+          "aggregate": "sum", "field": "count",
+          "title": "Number of Athletes",
+          "axis": {"format": "s"},
+          "sort": "descending"
+        },
+        "color": {
+            "field": "sex",
+            "scale": {
+                "domain": ["Female","Male"],
+                "range": ["#00ADE7","#E60153"]
+            },
+          "legend": null
+        },
+        "tooltip": [
+            {
+              "aggregate": "sum",
+              "field": "count",
+              "type": "quantitative",
+              "title": "Number of Athletes"
+            },
+            {
+              "field": "Discipline",
+              "type": "ordinal",
+              "title": "Event"
+            }
+          ]
+      }
+    }, {
+      "width": 20,
+      "view": {"stroke": null},
+      "mark": {
+        "type": "text",
+        "align": "center"
+      },
+      "encoding": {
+        "y": {"field": "Discipline", "type": "ordinal", "axis": null, "sort": "ascending"},
+        "text": {"field": "Discipline", "type": "ordinal"}
+      }
+    }, {
+      "transform": [{
+        "filter": {"field": "sex", "equal": "Male"}
+      }],
+      "title": "Male",
+      "mark": "bar",
+      "encoding": {
+        "y": {
+          "field": "Discipline", "title": null,
+          "axis": null, "sort": "ascending"
+        },
+        "x": {
+          "aggregate": "sum", "field": "count",
+          "title": "Number of Athletes",
+          "axis": {"format": "s"}
+        },
+        "color": {
+          "field": "sex",
+          "legend": null
+        },
+        "tooltip": [
+            {
+              "aggregate": "sum",
+              "field": "count",
+              "type": "quantitative",
+              "title": "Number of Athletes"
+            },
+            {
+              "field": "Discipline",
+              "type": "ordinal",
+              "title": "Event"
+            }
+          ]
+      }
+    }],
+    "config": {
+      "view": {"stroke": null},
+      "axis": {"grid": false}
+    }
+  }
+  
