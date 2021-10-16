@@ -89,5 +89,9 @@
         ]
       }
     }    
-  ]
+  ],
+  "config": {
+    "view": {"stroke": null},
+    "axis": {"grid": false}
+  }
 }
